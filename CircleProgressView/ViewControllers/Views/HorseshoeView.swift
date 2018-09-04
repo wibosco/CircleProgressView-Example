@@ -1,5 +1,5 @@
 //
-//  ProgressCircleView.swift
+//  HorseshoeView.swift
 //  CircleProgressView
 //
 //  Created by William Boles on 03/09/2018.
@@ -9,11 +9,12 @@
 import UIKit
 
 @IBDesignable
-class ProgressCircleView: UIView {
-    
+class HorseshoeView: UIView {
+
     private let trackLayer: CAShapeLayer = {
         let trackLayer = CAShapeLayer()
         trackLayer.fillColor = UIColor.clear.cgColor
+        trackLayer.lineCap = kCALineCapRound
         trackLayer.strokeStart = 0.0
         
         return trackLayer
@@ -90,11 +91,29 @@ class ProgressCircleView: UIView {
         let radius = (min(frame.size.width, frame.size.height) - lineWidth)/2
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
         
-        let startAngle = 1.5 * CGFloat.pi
-        let endAngle = startAngle + 2 * CGFloat.pi
+        let startAngle = -1.25 * CGFloat.pi
+        let endAngle = startAngle + 1.5 * CGFloat.pi
         let circlePath = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         
         trackLayer.path = circlePath.cgPath
         progressLayer.path = circlePath.cgPath
+    }
+    
+    // MARK: - Animate
+    
+    func setProgress(_ progress: CGFloat, fromProgress: CGFloat = 0,  animate: Bool) {
+        guard animate else {
+            progressLayer.strokeEnd = progress
+            return
+        }
+        
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.duration = CFTimeInterval(2)
+        animation.fromValue = fromProgress
+        animation.toValue = progress
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        
+        progressLayer.strokeEnd = progress
+        progressLayer.add(animation, forKey: "animateRing")
     }
 }

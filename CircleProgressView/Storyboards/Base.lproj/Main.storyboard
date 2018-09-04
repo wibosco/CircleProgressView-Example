@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C8b-ld-7B6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,20 +10,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="eKF-bk-rWH">
+            <objects>
+                <tabBarController id="C8b-ld-7B6" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uju-fE-JgY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="fn1-g4-e4X"/>
+                        <segue destination="KD5-k5-BEb" kind="relationship" relationship="viewControllers" id="tlM-pm-V9Q"/>
+                        <segue destination="BMF-gP-foP" kind="relationship" relationship="viewControllers" id="hoc-CW-FTv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSG-aY-RUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2153" y="-99"/>
+        </scene>
+        <!--Circles-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircleProgressView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Circles" id="BYZ-38-t0r" customClass="ProgressCircleViewController" customModule="CircleProgressView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUs-Cg-ITA" customClass="ProgressCircleView" customModule="CircleProgressView" customModuleProvider="target">
-                                <rect key="frame" x="87.5" y="45" width="200" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUs-Cg-ITA" customClass="DrawingProgressCircleView" customModule="CircleProgressView" customModuleProvider="target">
+                                <rect key="frame" x="67.5" y="65" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="shc-wW-JcD"/>
-                                    <constraint firstAttribute="width" constant="200" id="tzo-UQ-w0o"/>
+                                    <constraint firstAttribute="height" constant="240" id="shc-wW-JcD"/>
+                                    <constraint firstAttribute="width" constant="240" id="tzo-UQ-w0o"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
@@ -33,24 +52,178 @@
                                         <real key="value" value="18"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                        <color key="value" red="0.86301887475014749" green="0.96345264531089203" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="value" red="0.86274509803921573" green="0.96470588235294119" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
-                                        <color key="value" red="0.59932133450549152" green="1" blue="0.60419697489171398" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="value" red="0.59999999999999998" green="1" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TfF-Oo-lXy" customClass="ProgressCircleView" customModule="CircleProgressView" customModuleProvider="target">
+                                <rect key="frame" x="67" y="333" width="240" height="240"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.86274509799999999" green="0.96470588239999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                        <color key="value" red="0.59999999999999998" green="1" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.40000000000000002"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JUs-Cg-ITA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="NDv-Rd-Kc6"/>
-                            <constraint firstItem="JUs-Cg-ITA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w8G-hV-CP8"/>
+                            <constraint firstItem="TfF-Oo-lXy" firstAttribute="width" secondItem="JUs-Cg-ITA" secondAttribute="width" id="Bce-K5-AmU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TfF-Oo-lXy" secondAttribute="bottom" constant="45" id="C0H-sh-4eV"/>
+                            <constraint firstItem="JUs-Cg-ITA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="NDv-Rd-Kc6"/>
+                            <constraint firstItem="JUs-Cg-ITA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Taj-18-3KC"/>
+                            <constraint firstItem="TfF-Oo-lXy" firstAttribute="height" secondItem="JUs-Cg-ITA" secondAttribute="height" id="axb-DU-qag"/>
+                            <constraint firstItem="TfF-Oo-lXy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JUs-Cg-ITA" secondAttribute="bottom" constant="25" id="c9g-ZS-0GN"/>
+                            <constraint firstItem="TfF-Oo-lXy" firstAttribute="centerX" secondItem="JUs-Cg-ITA" secondAttribute="centerX" id="mT6-fi-GCq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Circles" id="snQ-yd-4RQ"/>
+                    <connections>
+                        <outlet property="drawingProgressCircleView" destination="JUs-Cg-ITA" id="W7q-TA-AlP"/>
+                        <outlet property="progressCircleView" destination="TfF-Oo-lXy" id="OIm-GB-23Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-890" y="-493"/>
+        </scene>
+        <!--Animating-->
+        <scene sceneID="SNq-Ar-IRO">
+            <objects>
+                <viewController title="Animating" id="KD5-k5-BEb" customClass="AnimatingViewController" customModule="CircleProgressView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wYe-id-VvR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-jD-He2" customClass="AnimatedProgressCircleView" customModule="CircleProgressView" customModuleProvider="target">
+                                <rect key="frame" x="47.5" y="124.5" width="280" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Ih7-eI-F3g"/>
+                                    <constraint firstAttribute="height" constant="280" id="brV-Rd-VQB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.86274509799999999" green="0.96470588239999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                        <color key="value" red="0.59999999999999998" green="1" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9O-cn-a5B">
+                                <rect key="frame" x="77" y="549" width="220" height="44"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.61568627450000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="bEJ-x0-AEc"/>
+                                    <constraint firstAttribute="height" constant="44" id="nyF-6W-sOG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Animate Progress">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateButtonPressed:" destination="KD5-k5-BEb" eventType="touchUpInside" id="FC8-Sl-HXD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xgB-jD-He2" firstAttribute="centerY" secondItem="wYe-id-VvR" secondAttribute="centerY" constant="-69" id="XvP-Tf-j8T"/>
+                            <constraint firstItem="siG-ZI-Dbn" firstAttribute="bottom" secondItem="A9O-cn-a5B" secondAttribute="bottom" constant="25" id="oc0-YK-PNz"/>
+                            <constraint firstItem="xgB-jD-He2" firstAttribute="centerX" secondItem="wYe-id-VvR" secondAttribute="centerX" id="p3A-nz-5oJ"/>
+                            <constraint firstItem="A9O-cn-a5B" firstAttribute="centerX" secondItem="wYe-id-VvR" secondAttribute="centerX" id="qa2-NS-Qjm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="siG-ZI-Dbn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Animating" id="WdS-qQ-dRG"/>
+                    <connections>
+                        <outlet property="animatedProgressCircleView" destination="xgB-jD-He2" id="Suo-U7-tAx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hiz-oo-zXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-890" y="211"/>
+        </scene>
+        <!--Horseshoe-->
+        <scene sceneID="YTh-nf-KEl">
+            <objects>
+                <viewController id="BMF-gP-foP" customClass="HorseshoeViewController" customModule="CircleProgressView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8LN-bP-og2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmL-AC-maT" customClass="HorseshoeView" customModule="CircleProgressView" customModuleProvider="target">
+                                <rect key="frame" x="47.5" y="124.5" width="280" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="DOs-BO-bJY"/>
+                                    <constraint firstAttribute="width" constant="280" id="bwc-88-te4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.86274509799999999" green="0.96470588239999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                        <color key="value" red="0.59999999999999998" green="1" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgM-Ee-XAj">
+                                <rect key="frame" x="77" y="549" width="220" height="44"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.61568627450000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2k0-m4-Y38"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="Kwe-AT-TTA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Animate Progress">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateButtonPressed:" destination="BMF-gP-foP" eventType="touchUpInside" id="VEx-Ho-th8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lmL-AC-maT" firstAttribute="centerY" secondItem="8LN-bP-og2" secondAttribute="centerY" constant="-69" id="AJs-fU-dY5"/>
+                            <constraint firstItem="qp6-wX-j8C" firstAttribute="bottom" secondItem="MgM-Ee-XAj" secondAttribute="bottom" constant="25" id="itc-sj-boN"/>
+                            <constraint firstItem="lmL-AC-maT" firstAttribute="centerX" secondItem="8LN-bP-og2" secondAttribute="centerX" id="ung-x9-z0e"/>
+                            <constraint firstItem="MgM-Ee-XAj" firstAttribute="centerX" secondItem="8LN-bP-og2" secondAttribute="centerX" id="zpW-Xr-oX1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qp6-wX-j8C"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Horseshoe" id="Iav-vy-fsG"/>
+                    <connections>
+                        <outlet property="horseshoeView" destination="lmL-AC-maT" id="32z-rl-F0t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWh-cU-WqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-906" y="1098"/>
         </scene>
     </scenes>
 </document>

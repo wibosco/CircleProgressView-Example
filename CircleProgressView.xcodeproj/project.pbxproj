@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		3D63DA13213DAA4C0029A425 /* CircleProgressViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63DA12213DAA4C0029A425 /* CircleProgressViewTests.swift */; };
 		3D63DA29213DAAD30029A425 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63DA1E213DAAD30029A425 /* AppDelegate.swift */; };
-		3D63DA2B213DAAD30029A425 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63DA21213DAAD30029A425 /* ViewController.swift */; };
-		3D63DA2C213DAAD30029A425 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D63DA23213DAAD30029A425 /* LaunchScreen.storyboard */; };
+		3D63DA2B213DAAD30029A425 /* ProgressCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63DA21213DAAD30029A425 /* ProgressCircleViewController.swift */; };
 		3D63DA2D213DAAD30029A425 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D63DA25213DAAD30029A425 /* Main.storyboard */; };
 		3D63DA2E213DAAD30029A425 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D63DA28213DAAD30029A425 /* Assets.xcassets */; };
-		3D63DA33213DC1F80029A425 /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63DA32213DC1F80029A425 /* ProgressCircleView.swift */; };
+		3D63DA33213DC1F80029A425 /* DrawingProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63DA32213DC1F80029A425 /* DrawingProgressCircleView.swift */; };
 		3D63DA35213DC74E0029A425 /* AnimatedProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63DA34213DC74E0029A425 /* AnimatedProgressCircleView.swift */; };
+		3DFD3A18213F02CB0001D501 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFD3A17213F02CB0001D501 /* LaunchScreen.storyboard */; };
+		C29BABF1213E87E700A3F7A4 /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29BABF0213E87E700A3F7A4 /* ProgressCircleView.swift */; };
+		C29BABF3213E928F00A3F7A4 /* AnimatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29BABF2213E928F00A3F7A4 /* AnimatingViewController.swift */; };
+		C29BABF7213E952200A3F7A4 /* HorseshoeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29BABF6213E952200A3F7A4 /* HorseshoeView.swift */; };
+		C2CE2C9C213E966C00F44B79 /* HorseshoeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE2C9B213E966C00F44B79 /* HorseshoeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +38,16 @@
 		3D63DA14213DAA4C0029A425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D63DA1E213DAAD30029A425 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D63DA1F213DAAD30029A425 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D63DA21213DAAD30029A425 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3D63DA24213DAAD30029A425 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D63DA21213DAAD30029A425 /* ProgressCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCircleViewController.swift; sourceTree = "<group>"; };
 		3D63DA26213DAAD30029A425 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D63DA28213DAAD30029A425 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3D63DA32213DC1F80029A425 /* ProgressCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
+		3D63DA32213DC1F80029A425 /* DrawingProgressCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingProgressCircleView.swift; sourceTree = "<group>"; };
 		3D63DA34213DC74E0029A425 /* AnimatedProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedProgressCircleView.swift; sourceTree = "<group>"; };
+		3DFD3A17213F02CB0001D501 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C29BABF0213E87E700A3F7A4 /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
+		C29BABF2213E928F00A3F7A4 /* AnimatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingViewController.swift; sourceTree = "<group>"; };
+		C29BABF6213E952200A3F7A4 /* HorseshoeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorseshoeView.swift; sourceTree = "<group>"; };
+		C2CE2C9B213E966C00F44B79 /* HorseshoeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorseshoeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +118,10 @@
 		3D63DA20213DAAD30029A425 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C29BABF2213E928F00A3F7A4 /* AnimatingViewController.swift */,
+				C2CE2C9B213E966C00F44B79 /* HorseshoeViewController.swift */,
+				3D63DA21213DAAD30029A425 /* ProgressCircleViewController.swift */,
 				3D63DA31213DC1F80029A425 /* Views */,
-				3D63DA21213DAAD30029A425 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -119,8 +129,8 @@
 		3D63DA22213DAAD30029A425 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				3D63DA23213DAAD30029A425 /* LaunchScreen.storyboard */,
 				3D63DA25213DAAD30029A425 /* Main.storyboard */,
+				3DFD3A17213F02CB0001D501 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -136,8 +146,10 @@
 		3D63DA31213DC1F80029A425 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3D63DA32213DC1F80029A425 /* ProgressCircleView.swift */,
 				3D63DA34213DC74E0029A425 /* AnimatedProgressCircleView.swift */,
+				3D63DA32213DC1F80029A425 /* DrawingProgressCircleView.swift */,
+				C29BABF6213E952200A3F7A4 /* HorseshoeView.swift */,
+				C29BABF0213E87E700A3F7A4 /* ProgressCircleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,9 +235,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFD3A18213F02CB0001D501 /* LaunchScreen.storyboard in Resources */,
 				3D63DA2D213DAAD30029A425 /* Main.storyboard in Resources */,
 				3D63DA2E213DAAD30029A425 /* Assets.xcassets in Resources */,
-				3D63DA2C213DAAD30029A425 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,9 +256,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D63DA35213DC74E0029A425 /* AnimatedProgressCircleView.swift in Sources */,
-				3D63DA2B213DAAD30029A425 /* ViewController.swift in Sources */,
-				3D63DA33213DC1F80029A425 /* ProgressCircleView.swift in Sources */,
+				C29BABF7213E952200A3F7A4 /* HorseshoeView.swift in Sources */,
+				C29BABF1213E87E700A3F7A4 /* ProgressCircleView.swift in Sources */,
+				3D63DA2B213DAAD30029A425 /* ProgressCircleViewController.swift in Sources */,
+				C2CE2C9C213E966C00F44B79 /* HorseshoeViewController.swift in Sources */,
+				3D63DA33213DC1F80029A425 /* DrawingProgressCircleView.swift in Sources */,
 				3D63DA29213DAAD30029A425 /* AppDelegate.swift in Sources */,
+				C29BABF3213E928F00A3F7A4 /* AnimatingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,14 +285,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3D63DA23213DAAD30029A425 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D63DA24213DAAD30029A425 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		3D63DA25213DAAD30029A425 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
